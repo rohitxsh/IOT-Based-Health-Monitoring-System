@@ -1,0 +1,20 @@
+.navbar{
+    -webkit-box-shadow: 0 8px 4px -4px #999;
+    -moz-box-shadow: 0 8px 4px -4px #999;
+    box-shadow: 0 8px 6px -4px #999;
+}
+
+.card{
+    margin: 25px 25px 10px 25px;
+}
+.card-header{
+    border-bottom-color: grey;
+}
+.card-deck{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.data_disp{
+    padding-top: 40px;
+    padding-bottom: 25px;
+}

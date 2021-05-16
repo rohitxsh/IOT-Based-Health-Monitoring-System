@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <!--<meta http-equiv="refresh" content="45"/>-->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
+    <script type="text/javascript" src="script.js"></script>
+
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <!--Navbar-->
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"><i class="fa fa-heart"></i> | Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+					IOT based Smart Health Monitoring System
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="card-deck">
+    <!--BPM-->
+    <div class="card text-center border-primary">
+        <div class="card-header">
+            BPM
+        </div>
+        <div class="card-body">
+            <div>
+                <iframe id="iframeid1" width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/579775/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&api_key=V9UGTYE4QSR5MOJ1&title=BPM&type=line"></iframe>
+            </div>
+            <div class="data_disp"><h3><i class="fa fa-heartbeat"></i> <div id="data1" style="display:inline;">--</div> bpm</h3></div>
+        </div>
+        <div class="card-footer text-muted">
+            Normal range: 60 to 100 beats per minute
+        </div>
+    </div>
+
+    <!--Temperature-->
+    <div class="card text-center border-primary">
+        <div class="card-header">
+            Temperature
+        </div>
+        <div class="card-body">
+            <div>
+                <iframe id="iframeid2" width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/579775/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&api_key=V9UGTYE4QSR5MOJ1&title=Temperature&type=line"></iframe>
+            </div>
+            <div class="data_disp"><h3><i class="fa fa-thermometer-full"></i> <div id="data2" style="display: inline;">--</div> &deg;C / <div id="data3" style="display: inline;">--</div> &deg;F</h3></div>
+        </div>
+        <div class="card-footer text-muted">
+            Normal range: 97°F (36.1°C) to 99°F (37.2°C)
+        </div>
+    </div>
+    </div>
+
+	<!--php
+		$to = "email@example.com";
+		$subject = "";
+		$txt = "";
+		$headers = "From: notification" . "\r\n" .";
+
+		mail($to,$subject,$txt,$headers);
+	-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
